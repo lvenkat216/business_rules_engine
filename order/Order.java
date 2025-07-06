@@ -1,5 +1,5 @@
 package business_rules_engine.order;
-import java.util.*;
+import business_rules_engine.business_rule_engine.*;
 public class Order{
     private String productType;
     private String productName;
@@ -9,6 +9,9 @@ public class Order{
         this.productType = productType;
         this.productName = productName;
         this.userEmail = userEmail;
+    
+        OrderProcessor od = new OrderProcessor();
+        od.process(this);
     }
     public String getType(){
         return productType;
