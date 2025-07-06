@@ -9,9 +9,6 @@ public class Order{
         this.productType = productType;
         this.productName = productName;
         this.userEmail = userEmail;
-    
-        OrderProcessor od = new OrderProcessor();
-        od.process(this);
     }
     public String getType(){
         return productType;
