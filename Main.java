@@ -1,4 +1,5 @@
 package business_rules_engine;
+import business_rules_engine.business_rule_engine.OrderProcessor;
 import business_rules_engine.order.Order;
 import java.util.*;
 public class Main {
@@ -13,6 +14,8 @@ public class Main {
         userEmail = s.nextLine().trim().toLowerCase();
         s.close();
         Order order = new Order(productName, productType, userEmail);
+        OrderProcessor processor = new OrderProcessor();
+        processor.process(order);
     }
 }
 
